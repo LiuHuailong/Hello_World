@@ -1,0 +1,22 @@
+ グループ開発:
+   ☐ clen_ver2,share_ver2で作成
+     ./calen_ver2.html/ 
+     ./share_ver2.css/
+     ☐ restart時todoがうまく消せない
+     
+   ☐ データベースの設計（劉、松本に任せた）
+   ☐ タイトル画面の作成
+     ./Title.html/
+     ./shareTitle.css/
+   ✔ スマホサイトの対応化 @done (17-01-20 10:10)
+      ✔ タイトル @done (16-12-07 16:58)
+      ☐ カレンダー
+      ☐ その他
+   ☐ 名前、IDは15文字以内（sinki.html）に書く
+     
+背景画像元:
+   calen_back.png   subtle Patterns
+   sky.jpg        写真AC
+   back.jpg      Stock Images
+Java課題:
+  122まで完了

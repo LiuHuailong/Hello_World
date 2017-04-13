@@ -1,0 +1,465 @@
+html{
+	height: 100%;
+}
+
+body{
+	width: 100%;
+	height:100%;
+	margin: 0;
+}
+
+#menu_ber{
+	width: 100%;
+	height: 80px;
+	background-color: black;
+	position: fixed;
+	z-index: 2;
+}
+#menu_ber h1{
+	display: inline-block;
+	margin-left: 10px;
+	opacity: 1;
+	color: #FFFFFF;
+	font-family: "Josefin Slab", serif;
+
+}
+
+
+div.spacer_top {
+	width: 100%;
+	height: 85%;
+	position: absolute; top: 50%;
+	text-align: center;
+	color: #142288;
+	}
+
+div.entry{
+	width: 100px;
+	margin:0 auto;
+	top: 50%;
+	color: #F621F8;
+	font-size: 20px;
+	display: none;
+	border: 1px solid #000000;
+	border-radius: 20%;
+}
+
+div.spacer_top_back{
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	/*background-image: url(sample.gif);*/
+	background-image: url(image/sky.jpg);
+	opacity: 0;
+}
+
+.spacer{
+	height: 80px;
+}
+
+
+#trigger01{
+
+}
+
+h1.titleh1{
+	display: inline-block;
+	opacity: 0;
+	padding: 10px;
+	font-size: 30px;
+	font-family: "Josefin Slab", serif;
+
+
+}
+
+
+/*section1*/
+.section1{
+	width: 100%;
+	/* background-color: #FAEBDD; */
+
+}
+#section1_text{
+	/*height: 170px;*/
+	width: 50%;
+	text-align: center;
+	margin-left: 25%;
+}
+
+#section1_text h2{
+	font-family: "Josefin Slab", serif;
+}
+
+img{
+	height: 500px;
+	width: 800px;
+	display: block;
+    margin-left: auto;
+ 	margin-right: auto;
+	opacity: 0;
+	/*border-radius: 10%;*/
+}
+
+#section1_text p{
+	opacity: 0;
+	font-size: 18px;
+
+}
+/*section2*/
+.section2{
+	width: 100%;
+	/* background-color: #940083; */
+}
+#section2_text{
+	text-align: center;
+	font-family: "Josefin Slab", serif;
+}
+
+.circle{
+	display: inline-block;
+	text-align: center;
+	border-radius: 100%;
+	height: 200px;
+	width: 200px;
+	background-color: #43FF45;
+	margin-top: 10%;
+}
+
+.circle p{
+	opacity: 0;
+	font-size: 18px;
+	}
+#section2_image{
+	width: 900px;
+	margin:0 auto;
+}
+#circle1{
+	margin-left: 0%;
+	opacity: 1;
+}
+#circle2{
+	margin-left: 0%;
+	opacity: 0;
+	/*display: none;*/
+}
+#circle3{
+	left: 144px;
+	opacity: 0;
+	/*display: none;*/
+}
+#scircle2{
+	display: none;
+}
+
+#scircle3{
+	display: none;
+}
+/*section3*/
+.section3{
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-image: url(image/back2.jpg);
+	opacity: 0;
+}
+
+.section3 div.end{
+	height: 30px;
+	display: none;
+}
+#section3_text{
+	text-align: center;
+	/* font-size: 20px; */
+	color: #FFFFFF;
+}
+#section3_text p{
+	font-size: 18px;
+}
+#section3_text h2{
+	font-family: "Josefin Slab", serif;
+}
+div#section3_button{
+	margin: 0 auto;
+	width: 900px;
+	margin-top: 50px;
+
+}
+
+div.section3_box{
+	display: inline-block;
+	width: 300px;
+	height: 400px;
+	background-color: rgba(255,255,255,0.8);
+	text-align: center;
+	border-radius: 10%;
+}
+
+div.section3_box h3{
+	font-family: "Josefin Slab", serif;
+}
+
+div#section3_right{
+	margin-left: 0px;
+	/*display: none;*/
+}
+
+div#section3_right p{
+	display: none;
+	margin-top: 20px;
+}
+
+div#section3_left{
+	margin-left: 295px;
+	/*display: none;*/
+}
+form p{
+	font-size: 20px;
+	color: #FFFFFF;
+}
+
+.sign{
+	margin-top:150px;
+	width: 150px;
+	height: 60px;
+}
+
+/*div#section3_right{	margin-left: 15%;}*/
+
+/*マウスエフェクト*/
+.entry {cursor: pointer;} 	/*マウスの形を変えるための記述*/
+.entry:hover { background-color: blue; }
+
+/*---------------スマホ専用スタイル-------------------------*/
+
+@media screen and (max-width:606px){
+/*img{
+max-width: 100%;
+height: auto;
+width :auto;　
+}*/
+#container{
+width:100%;
+}
+div.entry{
+	width: 100px;
+	margin:0 auto;
+	top: 50%;
+	color: #F621F8;
+	font-size: 20px;
+	display: none;
+	border: 1px solid #000000;
+	border-radius: 20%;
+}
+h1.titleh1{
+	font-size: 17px;
+	padding-left: 3px;
+	padding-right: 3px;
+	/* font-weight:900; */
+
+}
+div.spacer_top {
+	width: 100%;
+	height: 85%;
+	position: absolute; top: 50%;
+	text-align: center;
+	color: #142288;
+	}
+#menu_ber h1{
+	display: inline-block;
+	opacity: 1;
+	color: #FFFFFF;
+	font-family: "Josefin Slab", serif;
+	font-size: 25px;
+
+}
+#menu_ber{
+	width: 100%;
+	height: 60px;
+	background-color: black;
+	position: fixed;
+	z-index: 2;
+	text-align: center;
+}
+
+
+.section1{
+	width: 100%;
+	/*height:100%;*/
+	/* background-color: #FAEBDD; */
+
+}
+#section1_text{
+	/*height: 170px;*/
+	width: 100%;
+	text-align: center;
+	margin-left: 0px;
+}
+
+#section1_text h2{
+	font-size: 25px;
+
+}
+
+#section1_image{
+	height: 250px;
+	width: 100%;
+	margin-top: 20px;
+	background-color: blue;
+	opacity: 0;
+}
+
+img{
+ 		
+ 	width: 100%;
+   max-height: 300px;
+   opacity:0;
+}
+
+#section1_text p{
+	opacity: 0;
+	font-size: 15px;
+
+}
+/*section2*/
+.section2{
+	width: 100%;
+	/*height: 100%;*/
+	/* background-color: #940083; */
+}
+#section2_text{
+	text-align: center;
+}
+
+#section2_text h2{
+	font-size: 25px;
+}
+
+.circle{
+	display: inline-block;
+	text-align: center;
+	border-radius: 100%;
+	height: 200px;
+	width: 200px;
+	background-color: #43FF45;
+	margin-top: 10%;
+}
+
+.circle p{
+	opacity: 0;
+	font-size: 15px;
+	}
+#section2_image{
+	width: 200px;
+	text-align: center;
+}
+#circle1{
+	margin-left: 0%;
+	opacity: 1;
+}
+#circle1 p{
+	opacity: 1;
+}
+#circle2{
+	margin-left: 0%;
+	opacity: 0;
+	display: none;
+}
+#circle3{
+	margin-left: 0%;
+	opacity: 0;
+	display: none;
+}
+
+#scircle2{
+	display: block;
+	opacity: 0;
+}
+#scircle2 p{
+	opacity: 1;
+}
+
+#scircle3{
+	display: block;
+	opacity: 0;
+}
+#scircle3 p{
+	opacity: 1;
+}
+
+/*section3*/
+.section3{
+	width: 100%;
+	height: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-image: url(image/back2.jpg);
+}
+
+.section3 div.end{
+	display: block;
+}
+#section3_text{
+	text-align: center;
+	/* font-size: 20px; */
+	color: #FFFFFF;
+}
+#section3_text p{
+	font-size: 15px;
+}
+
+#section3_text h2{
+	font-size: 25px;
+}
+div#section3_button{
+	/*margin: 0 auto;*/
+	width: 100%;
+	margin-top: 5px;
+	text-align: center;
+
+}
+
+div.section3_box{
+	display: inline-block;
+	width: 300px;
+	height: 290px;
+	background-color: rgba(255,255,255,0.8);
+	text-align: center;
+	border-radius: 10%;
+	margin: 0 auto;
+}
+
+div#section3_right{
+	/*margin:0 auto;*/
+	/*display: none;*/
+}
+
+div#section3_right p{
+	display: block;
+	color: blue;
+	font-size: 12px;
+}
+
+div#section3_left{
+	display: none;
+}
+form p{
+	font-size: 20px;
+	color: #FFFFFF;
+}
+
+.sign{
+	margin-top:80px;
+	width: 150px;
+	height: 60px;
+}
+
+
+}

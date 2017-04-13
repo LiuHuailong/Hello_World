@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <input type="text" placeholder="add ToDo" id="txt_todo"><br>
+  <input type="button" value="add" onclick="add_todo();"><br>
+  <div id="view_todo"></div>
+
+<script>
+  function add_todo(){
+    var txt_todo = document.getElementById('txt_todo').value;
+    var view_todo = document.getElementById('view_todo').innerHTML;
+    if (view_todo != ""){
+      view_todo += "<br>";
+    }
+    document.getElementById('view_todo').innerHTML = view_todo + txt_todo + "<input type='button' value='del' onclick='del_todo();'>";
+    save();
+  }
+
+  function del_todo(){
+    document.getElementById('view_todo').innerHTML = "";
+  }
+
+  window.onload = function(){
+    var body_todo = localStorage.getItem('txt_todo');
+    document.getElementById('view_todo').innerHTML = body_todo;
+  }
+
+  function save(){
+    localStorage.setItem('txt_todo', document.getElementById('view_todo').innerHTML);
+  }
+
+
+</script>
+</body>
+
+</html>

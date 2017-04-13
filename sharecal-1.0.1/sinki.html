@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,
+    minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta charset="utf-8">
+    <title>新規登録</title>
+    <link rel="stylesheet" type="text/css" href="form2.css" media="all" />
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+
+<script type="text/javascript">
+
+function check1(){
+var n = $('#inputname').val();
+if(n == "ニノセ"){             //名前の検索
+    alert("違う名前にしてください");
+    return;
+}
+
+if(n == ""){
+    res = false;
+    window.alert("名前を入力してください");
+    return;
+}
+if(n.length > 15){
+  alert('名前は15文字以内で入力してください');
+  return;
+}
+check2();
+return;
+}
+
+
+function check2(){
+
+var n = $('#inputid').val();
+
+if(n == ""){
+    res = false;
+    window.alert("IDを入力してください");
+    return;
+    }
+if(n.match(/[^A-Za-z0-9]+/)){
+    alert('IDは半角英数字で入力');
+    return;
+}
+
+if(n.length > 15){
+  alert('IDは15文字以内で入力してください');
+  return;
+}
+
+check3();
+return;
+}
+
+
+function check3(){
+    var n = $('#inputpass').val();
+    var m = $('#inputpass2').val();
+
+if(n == ""){
+    res = false;
+    window.alert("パスワードを入力してください");
+            return;
+    }
+
+
+else if(m == ""){
+    res = false;
+    window.alert("確認パスワードを入力してください");
+    return;
+}
+
+
+
+else  if(n != m){
+    res = false;
+    window.alert("パスワードが一致しません");
+    return;
+    }
+// alert("認証成功");
+localStorage.username = myform.name.value;
+localStorage.userid = myform.id.value;
+
+
+window.location.href = 'akaunt.html';
+
+return;
+}
+
+
+</script>
+
+</head>
+<body>
+<div id="form">
+    <p class="form-title">新規登録</p>
+    <form name="myform" action="sinki.php" method="post">
+        <p>名前</p>
+        <p class="named"><input type="text" id="inputname" placeholder="15文字以内で入力してください" name="name"></p>
+        <p>ID(半角英数字)</p>
+        <p class="id"><input type="id" id="inputid" placeholder="15文字以内で入力してください" name="id" /></p>
+        <p>パスワード</p>
+        <p class="pass"><input type="password" id="inputpass" name="pass" /></p>
+        <p>確認パスワード</p>
+        <p class="pass"><input type="password" id="inputpass2" name="pass2"></p>
+        <!-- <p class="submit"><input type="button" value="登録" onclick="check1();"></p> -->
+        <p class="submit"><input type="submit" value="登録"></p>
+    </form>
+</div>
+</body>
+</html>

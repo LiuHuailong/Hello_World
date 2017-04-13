@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>現在位置からぐるなび検索</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>現在位置からぐるなび検索</h1>
+      </div>
+      <button class="btn btn-primary btn-lg btn-block" type="button" onclick="run()">検索</button>
+      <hr>
+      <ul id="result">
+      </ul>
+      <p class="text-right">
+        <small>Powered by <a href="http://www.gnavi.co.jp/">ぐるなび</a></small>
+      </p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script>
+      function run() {
+        // Geolocation APIの呼び出し
+        navigator.geolocation.getCurrentPosition(function(pos) {
+          // Geolocation APIのコールバック関数
+          // console.log(pos);
+          var lat = pos.coords.latitude;
+          var lng = pos.coords.longitude;
+          // ぐるなびAPIの呼び出し
+          $.get(
+            'http://api.gnavi.co.jp/RestSearchAPI/20150630/',
+            {
+              keyid: '24372843af15709a416f44a338d0c79f',
+              format: 'json',
+              latitude: lat,
+              longitude: lng,
+              range: '1'
+            },
+            function(response) {
+              // ぐるなびAPIのコールバック関数
+              var results = response.rest
+              $('#result').empty();
+              for (var i = 0; i < results.length; i++) {
+                var result = results[i];
+                $('<li><a></a></li>')
+                  .find('a')
+                    .text(result.name)
+                    .attr('href', result.url)
+                  .end()
+                  .appendTo('#result');
+              }
+            },
+            'jsonp'
+          );
+        });
+      }
+    </script>
+  </body>
+</html>

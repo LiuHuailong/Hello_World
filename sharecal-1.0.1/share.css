@@ -1,0 +1,239 @@
+body{													/*全体の背景の設定*/
+	background-image: url(resize-img.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+
+}
+
+table.calen {  font-size:20pt;
+			   background-color:#fffafa;
+			   position: static;
+			 } 
+
+table.calen th { height:30px;
+                  text-align: center; }
+
+table.calen td { text-align:center;		
+				vertical-align: middle;
+				 height:90px; 
+				 width:90px; 
+				}
+
+table.calen .sat { color:blue; }
+
+table.calen .satd { color:blue; }
+
+table.calen .sun { color:red; }
+
+table.calen .sund { color:red; }
+
+table.calen .today { background-color:#ffe4ce; 
+					font-weight:bold; 
+					}
+table.calen tr.bg1 { background-color:#f5f5dc;
+				     text-align: center; }
+
+table.calen{ margin-left: 10px; 
+}
+
+table.calen h6{
+	color: black;
+} 
+
+
+div.textinputs{										/********************************/
+	width: 400px;									
+	height: 500px;									
+	background-color: #FFFFFF;
+	background-image: url(back01.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding-top: 1em;
+
+}
+
+div.textinputs div+div{
+	margin-top: 2em;
+}
+
+label {
+	display: inline-block;							/* 入力画面の設定*/
+	width: 90px;
+	text-align: right;
+}
+
+#inputmenu input{
+	font: 1em sans-serif;
+	width: 210px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #999;
+}
+
+#inputmenu textarea#msg {
+	font: 1em sans-serif;
+	width: 210px;
+	height: 300px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: top;
+	border: 1px solid #999;
+	height: 5em;
+	resize: vertical;
+	
+}
+
+#inputmenu div#calendate{
+	text-align: center;
+	font-size: 20px;
+	}													/*::::::::::::::::::::::::::::::::*/
+div.button{
+	padding-left: 20px;
+	margin-left: 4em;
+}
+#calen input#next{									/*nextボタン*/
+	margin-left: 100px;
+	width: 80px;
+	font-size: 20px;
+}
+
+#calen input#back{
+	margin-right: 100px;
+	width: 80px;
+	font-size: 20px;
+}							
+
+
+div.todolist{
+	position: absolute; top: 90px;
+	margin-left: 700px;
+}
+
+div.todolist th{
+	color: red;
+	background-color: black;
+	text-align: center;
+}
+
+/*スクロール用*/
+thead.scrollHead,tbody.scrollBody{
+  display:block;
+}
+tbody.scrollBody{
+  overflow-y:auto;
+  height:227px;
+}
+
+#todotable{
+	border-style: none;
+}
+
+/*幅調整*/
+td,th{
+  table-layout:fixed;
+}
+.tit{
+  width:210px;
+}
+.ac1{
+  width:80px;
+}
+.ac2{
+  width:65px;
+}
+
+
+
+#todo{
+	position: absolute;right: 20%; top:80px;
+}
+
+#change{
+	position: absolute; right: 10px; top: 10px;
+}
+
+h1{										/*CALENDARタイトル*/
+	background-image: url(imgh1.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+#tw2{
+	position: absolute;right: 30%;top: 60px
+}
+#open{
+	position: absolute;top:90px;
+	margin-left: 700px;
+	}
+#tw{						/*Open Closeの設定*/
+	color: red;
+	font-size: 20px;
+}
+
+#todo div.text1{					/*出力画面の設定*/
+	display: inline-block;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #999;
+	font: 1em sans-serif;
+	width: 210px;
+	background-color: #FFFFFF;
+}
+
+#todo div.text2{
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid #999;
+    font: 1em sans-serif;
+	width: 150px;
+	height: 180px;
+	background-color: #FFFFFF;
+	overflow: auto;
+}
+
+span.showtext1{
+	text-align: right;
+	width: 90px;
+	display: inline-block;
+}									/*----------------*/
+
+div.GroupBox{
+	background-color: #FFFFFF;
+	width: 550px;
+	height: 284px;
+	position: relative; top: 20px;
+	font-size: 25px;
+	color: black;
+	border: 1px solid #F52954;
+	margin-left: 20px;
+	overflow-y: auto;  
+}
+
+div.GroupBox li{
+	display: inline-block;
+	width: 400px;
+}
+
+p#GroupEdit{
+	margin-top: 50px;
+}
+
+p#GroupEdit button{
+	margin-left: 80px;
+}
+
+/*マウスの変化*/
+.normal {cursor: pointer;} 	/*マウスの形を変えるための記述*/
+.normal:hover { background-color: #DDDDDD }	 /*マウス操作による背景色の変更*/
+.today {cursor: pointer;}
+.today:hover { background-color: #DDDDDD }
+.satd {cursor: pointer;}
+.satd:hover { background-color: #DDDDDD }
+.sund {cursor: pointer;}
+.sund:hover { background-color: #DDDDDD }
+#tw{cursor: pointer;}
+#todolist td{cursor: pointer;}
+#todolist td:hover { text-decoration: underline; }

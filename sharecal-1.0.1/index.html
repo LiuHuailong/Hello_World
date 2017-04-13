@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-script-type" content="text/javascript">
+<title>シェアカレ</title>
+<link href="shareTitle.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="js/lib/greensock/TweenMax.min.js"></script>
+<script type="text/javascript" src="js/lib/velocity.min.js"></script>
+<script type="text/javascript" src="scrollmagic/uncompressed/ScrollMagic.js"></script>
+<script type="text/javascript" src="scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+<script type="text/javascript" src="scrollmagic/uncompressed/plugins/animation.velocity.js"></script>
+<script type="text/javascript" src="scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	var controller = new ScrollMagic.Controller();
+</script>
+</head>
+<body>
+<div id="menu_ber">
+	<h1>SHARECALENDAR</h1>
+</div>
+<div id="trigger01"></div>
+<div class="spacer_top_back"></div>
+<div class="spacer_top">
+	<h1 class="titleh1" id = "S">S</h1>
+	<h1 class="titleh1" id = "H">H</h1>
+	<h1 class="titleh1" id = "A">A</h1>
+	<h1 class="titleh1" id = "R">R</h1>
+	<h1 class="titleh1" id = "E">E</h1>
+	<h1 class="titleh1" id = "spac">&nbsp;</h1>
+	<h1 class="titleh1" id = "C">C</h1>
+	<h1 class="titleh1" id = "A2">A</h1>
+	<h1 class="titleh1" id = "L">L</h1>
+	<h1 class="titleh1" id = "E2">E</h1>
+	<h1 class="titleh1" id = "N">N</h1>
+	<h1 class="titleh1" id = "D">D</h1>
+	<h1 class="titleh1" id = "A3">A</h1>
+	<h1 class="titleh1" id = "R2">R</h1>
+	<div class="entry">Login</div>
+</div>
+<script>
+var title_tween = new TimelineMax();
+			title_tween.staggerTo('.spacer_top h1' , 0.2 ,{opacity:1, scale:2},0.2);
+
+		//.add(TweenMax.to(".spacer_top h1",2,{ y:-100,opacity:1}))
+		//add(TweenMax.to(".spacer_top_back",2,{css:{opacity:1}}));
+		title_tween.to(".spacer_top h1",2,{y:-170})
+		.to(".spacer_top_back",2,{css:{opacity:1}}, '-=2')
+		.to(".entry",0.5,{display:'block'});
+</script>
+<div id="trigger02"></div>
+<div class="section1">
+	<div class="spacer"></div>
+	<div id= "section1_text">
+	<h2>予定を共有（シェア）する新しいカレンダー</h2>
+	<p>シェアカレは今までのカレンダーとは全く違います。自分の予定を他人にシェアすることができる新しいカレンダーそれがシェアカレです。住む街のイベント、学校行事などの予定をこのカレンダーに書き込めば知らせたい人全員に見せることができます。</p>
+    </div>
+     <img src="image/iphoen.png">
+</div>
+<script>
+		var scene = new ScrollMagic.Scene({triggerElement: "#trigger02"})
+		.setTween(TweenMax.to(["#section1_text p", ".section1 img"],1,{css:{opacity:1} , delay:0.2}))
+		.addTo(controller);
+</script>
+<div id="trigger03"></div>
+<div class="section2">
+	<div class="spacer"></div>
+	<div id="section2_text">
+	<h2>利用までの流れ</h2>
+	 </div>
+	 <div id="section2_image">
+	 <div class="circle" id= "circle1">
+	 	<h3>STEP1</h3>
+	 	<p>個人情報の入力</p>
+	 </div>
+	 <div class="circle" id= "circle2">
+	 	<h3>STEP2</h3>
+	 	<p>アカウント情報の取得</p>
+	 	</div>
+	 <div class="circle" id= "circle3">
+	 	<h3>STEP3</h3>
+	 	<p>ようこそ、シェアカレへ</p>
+	 </div>
+	  <div class="circle" id= "scircle2">
+	 	<h3>STEP2</h3>
+	 	<p>アカウント情報の取得</p>
+	 	</div>
+	 <div class="circle" id= "scircle3">
+	 	<h3>STEP3</h3>
+	 	<p>ようこそ、シェアカレへ</p>
+	 </div>
+	</div>
+	</div>
+<script>
+	second_tween = new TimelineMax();
+	 second_tween.to("#circle2" , 1 , {x:144 , opacity:1})
+	 			 .to("#scircle2", 1 , {opacity:1},'-=1.0')
+	 			 .to("#circle3" , 1 , {x:294 , opacity:1})
+	 			 .to("#scircle3", 1 ,{opacity:1},'-=1.0')
+	  			 .staggerTo(".circle p", 1 ,{opacity:1});
+
+	 var scene = new ScrollMagic.Scene({triggerElement:"#trigger03"})
+	 				.setTween(second_tween)
+	 				.addTo(controller);
+</script>
+<div id="trigger04"></div>
+<div class= "section3">
+	<div class="spacer"></div>
+	<div id="section3_text">
+		<h2>シェアする生活をあなたへ </h2>
+		<p>多くは語りません。あとはあなたの目で確かめてください。</p>
+	</div>
+	<div id="section3_button">
+		<div class="section3_box" id="section3_right">
+			<h3>新規登録はこちらから</h3>
+			<button type="button" class="btn btn-success sign" onclick="location.href='sinki.html'">新規登録</button>
+			<p onclick="location.href='login.html'">ログインはこちらから</p>
+		</div>
+		<div class="section3_box" id="section3_left">
+			<h3>ログインはこちらから</h3>
+			<button type="button" class="btn btn-success sign" onclick="location.href='login.html'">ログイン</button>
+		</div>
+	</div>
+			<div class="end"></div>
+	</div>
+	<script>
+	 var scene = new ScrollMagic.Scene({triggerElement: "#trigger04"})
+		.setTween(TweenMax.to(".section3",1,{css:{opacity:1}}))
+		.addTo(controller);
+
+		$('.entry').on('click', function(){
+			if(localStorage.username == null){
+				// alert('ログイン画面へ遷移');
+				window.location.href = 'login.html';
+				return;
+			}
+			else{
+				// alert('calen_ver2へ遷移');
+				window.location.href = 'calen_ver2.html';
+			}
+		})
+	</script>
+</body>
+</html>

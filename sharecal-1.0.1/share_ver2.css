@@ -1,0 +1,946 @@
+html{
+	height: 100%;
+}
+
+body{													/*Ã¨Æ’Å’Ã¦â„¢Â¯Ã§â€Â»Ã¥Æ’Â*/
+	background-image: url(image/calen_back.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	width: 100%;
+	/* height:100%; */
+	margin: 0;
+	padding: 0;
+}
+
+div.main{
+	width: 600px;
+	height: 650px;
+	margin: 0 auto;
+	margin-top: 10px;
+	overflow-x: hidden;
+}
+
+#menu_ber{
+	width: 100%;
+	padding-left: 10px;
+	border-bottom:1px solid #ccc;
+}
+#menu_ber h1{
+	display: inline-block;
+	margin-left: 10px;
+	color: #FFFFFF;
+}
+
+#Group_title{
+	margin-left: 10px;
+	margin-bottom: 5px;
+	display: none;
+}
+.logboutton{
+	display: inline-block;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+
+#smartmenu{
+	display: none;
+	border-bottom:1px solid #000;
+}
+.smartinput{
+	position: relative;
+	background-color: #FFFFFF;
+	width: 100%;
+	height: 0px;
+	display: none;
+	text-align: center;
+	/*margin:0 auto;*/
+	overflow: hidden;
+}
+.smartinput label{
+	text-align: center;
+}
+
+.smartout{
+	display: none;
+	width: 100%;
+	height: 0vh;
+	text-align: center;
+	background-color: #fff;
+	overflow: hidden;
+
+}
+.smartout label{
+	text-align: center;
+}
+
+.stext{
+	text-align: left;
+}
+
+table.calen {  font-size:20pt;
+			   margin: 0 auto;
+			   margin-top: -490px;
+			   background-image: url();
+			   border-collapse:collapse;
+			   display: inline-block;
+			 }
+
+table.calen th { height:30px;
+                 text-align: center;
+                 color: #FFFFFF;
+                   }
+
+table.calen td { text-align:center;
+				vertical-align: middle;
+				 height:90px;
+				 width:90px;
+				 color: #FFFFFF;
+				}
+
+table.calen .sat { color:#4484FF; }
+
+table.calen .satd { color:#4484FF; }
+
+table.calen .sun { color:red; }
+
+table.calen .sund { color:red; }
+
+table.calen .today { background-color: #348385;
+					font-weight:bold;
+					}
+table.calen tr.bg1 {
+			color: #FFFFFF;
+		    text-align: center;
+		    border-bottom:1px solid #ccc;
+		}
+table.calen tr.bg2{
+	border-bottom:1px solid #ccc;
+}
+table.calen tr.daydate{
+	border-bottom:1px dashed #ccc;
+}
+
+p#calen{
+	margin: 0 auto;
+	display: inline-block;
+}
+
+
+table.calen h6{
+	color: black;
+}
+
+
+div.textinputs{
+	position: relative;									/********************************/
+	width: 400px;
+	height: 400px;
+	background-color: #FFFFFF;
+	background-image: url(back01.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding-top: 1em;
+	margin-top: 80px;
+	margin-left: -400px;
+	z-index: 10;
+	display: inline-block;
+
+}
+
+div.smarttextinputs{
+	display: none;
+}
+
+div.textinputs div+div{
+	margin-top: 2em;
+}
+
+.calendate{
+	text-align: center;
+	font-size: 20px;
+	}
+
+label {
+	display: inline-block;							/* Ã¥â€¦Â¥Ã¥Å â€ºÃ§â€Â»Ã©ÂÂ¢*/
+	width: 90px;
+	text-align: right;
+}
+
+.settitle{
+	font: 1em sans-serif;
+	width: 250px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #999;
+}
+
+.msg {
+	font: 1em sans-serif;
+	width: 250px;
+	height: 180px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: top;
+	border: 1px solid #999;
+	height: 5em;
+	resize: vertical;
+
+}
+
+.todo{
+	margin-left: 1000px;
+	margin-top: -550px;
+	z-index: 9;
+}
+
+
+div#calendate2{
+	text-align: center;
+	font-size: 20px;
+	}
+
+#inputmenu2 input{
+	font: 1em sans-serif;
+	width: 250px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #999;
+}
+
+textarea#msg2 {
+	font: 1em sans-serif;
+	width: 220px;
+	height: 180px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: top;
+	border: 1px solid #999;
+	height: 5em;
+	resize: vertical;
+
+}												/*::::::::::::::::::::::::::::::::*/
+div.button{
+	padding-left: 20px;
+	margin-left: 4em;
+}
+#calen input#next{									/*nextÃ£Æ’Å“Ã£â€šÂ¿Ã£Æ’Â³*/
+	margin-left: 100px;
+	margin-bottom: 10px;
+	background-color: #3B6E40;
+	border-radius: 100%;
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+}
+
+#calen input#back{
+	margin-right: 100px;
+	margin-bottom: 10px;
+	background-color: #3B6E40;
+	border-radius: 100%;
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+}
+
+
+div.todolist{
+	position: absolute; top: 140px;
+	margin-left: 75%;
+}
+
+div.todolist th{
+	color: red;
+	background-color: black;
+	text-align: center;
+}
+
+/*Ã£Æ’â€ Ã£Æ’Â¼Ã£Æ’â€“Ã£Æ’Â«Ã¨Â¨Â­Ã¥Â®Å¡*/
+thead.scrollHead,tbody.scrollBody{
+  display:block;
+}
+tbody.scrollBody{
+  overflow-y:auto;
+  height:227px;
+}
+
+#todotable{
+	border-style: none;
+}
+
+/* Ã£Æ’â€ Ã£Æ’Â¼Ã£Æ’â€“Ã£Æ’Â«Ã£â€šÂµÃ£â€šÂ¤Ã£â€šÂº */
+td,th{
+  table-layout:fixed;
+}
+.tit{
+  width:200px;
+}
+.ac1{
+  width:80px;
+}
+
+
+
+
+#change{
+	position: absolute; right: 10px; top: 10px;
+}
+
+#tw2{
+	position: absolute;right: 9.5%;top: 98px
+}
+
+.tw{						/*Open CloseÃ£Æ’Å“Ã£â€šÂ¿Ã£Æ’Â³*/
+	color: red;
+	font-size: 30px;
+	border-radius: 100%;
+	background-color: #FFFFFF;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	/*vertical-align: middle;*/
+}
+
+.text1{					/*Ã‚ÂÃ¥â€¡ÂºÃ¥Å â€ºÃ§â€Â»Ã©ÂÂ¢*/
+	display: inline-block;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #999;
+	font: 1em sans-serif;
+	width: 250px;
+	background-color: #FFFFFF;
+}
+.todotime{
+	display: inline-block;
+	padding-left: 10px;
+}
+
+.text2{
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid #999;
+    font: 1em sans-serif;
+	width: 250px;
+	height: 180px;
+	background-color: #FFFFFF;
+	word-wrap: break-word;
+	overflow: auto;
+}
+
+span.showtext1{
+	text-align: right;
+	width: 90px;
+	display: inline-block;
+}									/*----------------*/
+
+div.Groupsection{
+	background-color: #FFFFFF;
+	width: 320px;
+	height: 440px;
+	/*margin-right: 20px;*/
+	font-size: 15px;
+	color: black;
+	border: 1px solid #F52954;
+	overflow-x: hidden;
+
+}
+
+div.Grouptext{
+	position: relative;
+	width: 310px;
+	height: 310px;
+	margin-right: 0px;
+	overflow-y: auto;
+	margin-top: -315px;
+}
+div.slide{
+	position: relative;
+	width: 310px;
+	height: 315px;
+	background-color: #FFFFFF;
+	display: inline-block;
+	margin-left: -300px;
+	z-index: 10;
+	text-align: center;
+
+}
+
+div.GroupBox .Grouplist{
+	display: inline-block;
+	width: 250px;
+	padding-left: 10px;
+	vertical-align: middle;
+	margin-bottom: 10px;
+	border-bottom:1px solid #1D60E9;
+}
+
+
+div.GroupBox h3{
+}
+
+div.GroupBox div#titleh{
+	height: 50px;
+	width: 310px;
+}
+
+p#GroupEdit{
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+p#GroupEdit button{
+
+}
+
+div.Groupsection{
+	position: absolute;
+	right: 75%;
+	top: 140px;
+}
+
+#createin{
+	position: absolute;
+	top:60px;
+	padding-top: 12px;
+	height: 120%;
+	width: 100%;
+	background-color: #494949;
+	display: none;
+	 /*opacity: 0.5; */
+	z-index: 13;
+}
+#Group_calen{
+	display: none;
+}
+
+
+
+#Group_title{
+	height: 40px;
+	width: 600px;
+	margin-top: 15px;
+	background-color: transparent;
+	color: #FFFFFF;
+	font-size: 30px;
+	border: 1px solid #32EFFB;
+}
+
+#tw3{
+	position: absolute;right: 9.5%;top: 50px
+}
+
+
+#createin div.todolist2{
+	position: absolute; top: 92px;
+	margin-left: 75%;
+}
+
+div.todolist2 th{
+	color: red;
+	background-color: black;
+	text-align: center;
+}
+#todotable2{
+	border-style: none;
+}
+p#Group_create_button{
+	margin-left: 75%;
+	margin-top: -5%;
+}
+/*Ã£Æ’â€ºÃ£Æ’ÂÃ£Æ’Â¼Ã£â€šÂ¨Ã£Æ’â€¢Ã£â€šÂ§Ã£â€šÂ¯Ã£Æ’Ë†*/
+.normal {cursor: pointer;}
+.normal:hover { background-color: #DDDDDD }
+.today {cursor: pointer;}
+.today:hover { background-color: #DDDDDD }
+.satd {cursor: pointer;}
+.satd:hover { background-color: #DDDDDD }
+.sund {cursor: pointer;}
+.sund:hover { background-color: #DDDDDD }
+.Grouplist {cursor:pointer;}
+#tw{cursor: pointer;}
+#todolist td{cursor: pointer;}
+#todolist td:hover { text-decoration: underline; }
+
+
+
+
+
+
+/*---------------Ã£â€šÂ¹Ã£Æ’Å¾Ã£Æ’â€ºÃ¥Â°â€šÃ§â€Â¨Ã£â€šÂ¹Ã£â€šÂ¿Ã£â€šÂ¤Ã£Æ’Â«-------------------------*/
+
+
+
+
+
+@media screen and (max-width:700px){
+/*img{
+max-width: 100%;
+height: auto;
+width :auto;Ã‚Â@
+}*/
+#container{
+width:100%;
+}
+
+#menu_ber{
+	width: 100%;
+	height: 35px;
+	padding-left: 10px;
+	border-bottom:1px solid #ccc;
+}
+#menu_ber h1{
+	display: inline-block;
+	margin-left: 5px;
+	margin-top: 5px;
+	color: #FFFFFF;
+	font-size: 18px;
+}
+
+
+.logboutton{
+	right: 10px;
+	position: absolute;
+	top:0px;
+
+	
+}
+#smartmenu{
+	width: 100%;
+	height: 35px;
+	display: block;
+	background-color: #fff;
+}
+#smartmenu{
+	/*font-size: 25px;*/
+	/*margin-top: -10px;*/
+}
+/*#smartmenu p{
+	font-size: 20px;
+	border: 1px solid #000;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	padding-bottom: -5px;
+	margin-left:20%;
+	margin-top: 10px;
+	line-height: 20px;
+}*/
+.release{
+	margin-left:10px;
+	display: inline-block;
+	visibility: hidden;
+}
+.smartdel{
+	display: inline-block;
+	visibility: hidden;
+}
+.smartadd{
+	/*margin-top: -20px;*/
+	/*visibility: hidden;*/
+	
+	display: inline-block;
+	margin-left: 22%;
+}
+.smartinput{
+	display: block;
+	z-index: 11;
+}
+.smartout{
+	display: block;
+}
+div.main{
+	height: 315px;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	/*display: none;*/
+
+}
+
+table.calen {  font-size:12pt;
+			   margin: 0 auto;
+			   margin-top: 0px;
+			   background-image: url();
+			   border-collapse:collapse;
+			 }
+
+table.calen th { height:15px;
+                 text-align: center;
+                 color: #FFFFFF;
+                   }
+
+table.calen td { text-align:center;
+				vertical-align: middle;
+				 height:20px;
+				 width:40px;
+				 color: #FFFFFF;
+				 line-height: 100%;
+				}
+
+table.calen .sat { color:#4484FF; }
+
+table.calen .satd { color:#4484FF; }
+
+table.calen .sun { color:red; }
+
+table.calen .sund { color:red; }
+
+table.calen .today { background-color: #348385;
+					font-weight:bold;
+					}
+table.calen tr.bg1 {
+			color: #FFFFFF;
+		    text-align: center;
+		    border-bottom:1px solid #ccc;
+		}
+table.calen tr.bg2{
+	border-bottom:1px solid #ccc;
+}
+table.calen tr.daydate{
+	border-bottom:1px dashed #ccc;
+}
+
+p#calen{
+	margin: 0 auto;
+}
+
+
+table.calen h6{
+	color: black;
+}
+
+
+div.textinputs{										/********************************/
+	background-color: #FFFFFF;
+	background-image: url(back01.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding-top: 1em;
+	height: 300px;
+	width: 300px;
+	display: none;
+
+}
+
+div.textinputs div+div{
+	margin-top: 2em;
+}
+
+#inputmenu div#calendate{
+	text-align: center;
+	font-size: 20px;
+	}
+
+label {
+	display: inline-block;
+	width: 90px;
+	text-align: right;
+}
+
+#inputmenu input{
+	font: 1em sans-serif;
+	width: 150px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #999;
+}
+
+#inputmenu textarea#msg {
+	font: 1em sans-serif;
+	width: 200px;
+	height: 180px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: top;
+	border: 1px solid #999;
+	height: 5em;
+	resize: vertical;
+
+}
+
+.todo{
+	margin-left: 1000px;
+	margin-top: -550px;
+	z-index: 9;
+	display: none;
+}
+
+
+#inputmenu2 div#calendate2{
+	text-align: center;
+	font-size: 20px;
+	}
+
+#inputmenu2 input{
+	font: 1em sans-serif;
+	width: 150px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #999;
+}
+
+#inputmenu2 textarea#msg2 {
+	font: 1em sans-serif;
+	width: 200px;
+	height: 180px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: top;
+	border: 1px solid #999;
+	height: 5em;
+	resize: vertical;
+
+}												/*::::::::::::::::::::::::::::::::*/
+div.button{
+	padding-left: 20px;
+	margin-left: 4em;
+}
+#calen input#next{
+	margin-left: 0px;
+	margin-bottom: 5px;
+	border-radius: 0%;
+	background-color: #3B6E40;
+	width: 15px;
+	height: 15px;
+	font-size: 10px;
+	/* text-align: center; */
+}
+
+#calen input#back{
+	margin-right: 0px;
+	margin-bottom: 5px;
+	border-radius: 0%;
+	background-color: #3B6E40;
+	width: 15px;
+	height: 15px;
+	font-size: 10px;
+}
+
+
+div.todolist{
+	position: static;
+	/*margin-left: 20px;
+	margin-top: 0px;
+	margin-right: 20px;*/
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 11;
+	width: 320px;
+
+}
+
+div.todolist th{
+	color: red;
+	background-color: black;
+	text-align: center;
+}
+
+
+thead.scrollHead,tbody.scrollBody{
+  display:block;
+}
+tbody.scrollBody{
+  overflow-y:auto;
+  height:227px;
+}
+
+#todotable{
+	border-style: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+td,th{
+  table-layout:fixed;
+}
+.tit{
+  width:240px;
+}
+
+.ac1{
+  width:80px;
+}
+.ac2{
+  /*width:65px;*/
+}
+
+
+
+
+#change{
+	position: absolute; right: 10px; top: 10px;
+}
+
+#tw2{
+	position: absolute;right: 9.5%;top: 98px
+}
+
+.tw{
+	color: red;
+	font-size: 30px;
+	border-radius: 100%;
+	background-color: #FFFFFF;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	/*vertical-align: middle;*/
+	display: none;
+}
+
+#todo div.text1{
+	display: inline-block;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #999;
+	font: 1em sans-serif;
+	width: 150px;
+	background-color: #FFFFFF;
+}
+
+#todo div.text2{
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid #999;
+    font: 1em sans-serif;
+	width: 150px;
+	height: 180px;
+	background-color: #FFFFFF;
+	word-wrap: break-word;
+	overflow: auto;
+}
+
+span.showtext1{
+	text-align: right;
+	width: 90px;
+	display: inline-block;
+}									/*----------------*/
+
+div.Groupsection{
+	background-color: #FFFFFF;
+	width: 320px;
+	height: 440px;
+	/*margin-left: 100px;*/
+	/*margin-top:200px;*/
+	font-size: 15px;
+	color: black;
+	border: 1px solid #F52954;
+	overflow-x: hidden;
+	/*display: none;*/
+
+}
+
+div.Grouptext{
+	position: relative;
+	width: 310px;
+	height: 310px;
+	margin-right: 0px;
+	overflow-y: auto;
+	margin-top: -315px;
+}
+
+div.Grouptext div{
+
+}
+div.slide{
+	position: relative;
+	width: 310px;
+	height: 315px;
+	background-color: #FFFFFF;
+	display: inline-block;
+	margin-left: -300px;
+	z-index: 10;
+	text-align: center;
+
+}
+
+div.GroupBox .Grouplist{
+	display: inline-block;
+	width: 250px;
+	padding-left: 10px;
+	vertical-align: middle;
+	margin-bottom: 10px;
+}
+
+
+div.GroupBox h3{
+}
+
+div.GroupBox div#titleh{
+	height: 50px;
+	width: 310px;
+}
+
+p#GroupEdit{
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+p#GroupEdit button{
+
+}
+
+div.Groupsection{
+	position: static;
+	margin: 0 auto;
+}
+
+#createin{
+	position: absolute;
+	top:65px;
+	padding-top: 12px;
+	width: 100%;
+	background-color: #494949;
+	display: none;
+	 /*opacity: 0.5; */
+	z-index: 10;
+}
+
+
+
+#Group_title{
+	height: 18px;
+	width: 200px;
+	background-color: transparent;
+	color: #FFFFFF;
+	font-size: 12px;
+	border: 1px solid #32EFFB;
+	margin:0 auto;
+	margin-top: 5px;
+}
+
+#tw3{
+	position: absolute;right: 9.5%;top: 50px
+}
+#open2{
+	position: absolute;top:92px;
+	margin-left: 75%;
+	width: 200px;
+	}
+
+#createin div.todolist2{
+	position: static;
+	margin-left: auto;
+	margin-right: auto;
+	width: 320px;
+}
+
+div.todolist2 th{
+	color: red;
+	background-color: black;
+	text-align: center;
+}
+#todotable2{
+	border-style: none;
+}
+p#Group_create_button{
+	margin:auto;
+	text-align: center;
+}
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css"href="akaunt.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<title>確認</title>
+	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+	<script src="bootjs/bootstrap.min.js"></script>
+<table border="4" width="500" height="300">
+<tbody>
+		<tr><td>名前: <span class="name"></span></td></tr>
+		<tr><td>ID: <span class="id"></span></td></tr>
+	<tr><td>パスワード:  ****</td></tr>
+	<tr><td>確認パスワード:  ****</td></tr>
+</tbody>
+</table>
+<script type="text/javascript">
+function init(){
+	var username;
+	var userid;
+
+	username=localStorage.username;
+	userid = localStorage.userid;
+	$('.name').text(username);
+	$('.id').text(userid);
+
+}
+
+
+</script>
+<p class="button">
+<button class="btn btn-primary"onclick="window.location.href = 'sinki.html'";>キャンセル</button>
+<button class ="btn btn-success" id="right" onclick="window.location.href = 'calen_ver2.html'";>OK</button>
+</p>
+
+</head>
+<body onload="init()">
+</body>
+</html>
+
+	
+	

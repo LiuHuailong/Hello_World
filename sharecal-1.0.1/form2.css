@@ -25,11 +25,6 @@ form p{
 .form-title{
   text-align: center;
   }
-
-.named,.id,.pass{
-  margin-bottom:20px;
-  }
-
 input[type="text"],
 input[type="id"],
 input[type="password"] {
